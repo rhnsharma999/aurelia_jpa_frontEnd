@@ -1,0 +1,29 @@
+<template>
+  <h1>${message}</h1>
+
+
+  <button click.trigger = "loadData()">Refresh</button>
+  <br><br><br><br>
+  <form submit.trigger = "addData()">
+  	<input type = "text" value.bind = "nameField">
+  	<input type = "text" value.bind = "cityField">
+  	<button type = "submit">Submit</button>
+  </form>
+
+<br><br><br><br>
+  <table border = 1>
+  	<tr>
+  		<th>Name</th>
+  		<th>City</th>
+  	</tr>
+
+  	<tr repeat.for = "d of empData">
+  		<td>${d.name}</td>
+  		<td>${d.city}</td>
+  	</tr>
+  </table>
+
+
+
+
+</template>
